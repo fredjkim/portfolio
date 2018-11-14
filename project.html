@@ -21,7 +21,7 @@
     </section>
 
     <section class = "study-content">
-      <!-- summary -->
+      <!-- Summary -->
       <article>
         <h1 class = "main-sections">Summary</h1>
         <h3>Skylake is a cloud service for busy students and professionals who want a cleaner and easier workflow.</h3>
@@ -53,17 +53,22 @@
         </table>
       </article>
 
-      <!-- problem -->
+      <!-- Problem -->
       <article>
         <h1 class = "main-sections">The Problem</h1>
         <h3>Users have four main frustrations with current cloud apps</h3>
-        <div class="problem-graph">
-
+        <div id="chart"> <!-- css and js to show col chart and animate-->
+          <ul id="bars">
+            <li><div data-percentage="32" class="bar"></div><span>Tedious Navigation</span></li>
+            <li><div data-percentage="25" class="bar"></div><span>Ambiguous Features</span></li>
+            <li><div data-percentage="25" class="bar"></div><span>Too Many Features</span></li>
+            <li><div data-percentage="19" class="bar"></div><span>Cluttered Workspace</span></li>
+          </ul>
         </div>
         <p>Feature creep, cluttered interfaces, and unclear navigation drown cloud user’s experience. Information overload and decision paralysis frustrates users as masses of features and ambiguous icons demand their attention.</p>
       </article>
 
-      <!-- solution -->
+      <!-- Solution -->
       <article>
         <h1 class = "main-sections">The Solution</h1>
         <div class = "solution-img-txt">
@@ -94,31 +99,51 @@
       <!-- Design Process -->
       <article>
         <h1 class = "main-sections">The Design Process</h1>
-        <!-- research and discovery -->
+        <!-- Research and discovery -->
         <h3 class = "process-steps"><span class = "gold-number">1.</span> Research and Discovery</h3>
         <p>I surveyed 17 individuals to identify user priorities, frustrations, preferences, and common practices. I use pain points and contributors to success to scope target audience, product direction, and brand identity.</p>
         <div class = "grid-2x1">
           <span>
             <h4>Pain Points</h4>
-            <!-- col chart here -->
+              <div id="chart">
+                <ul class="bar-yellow">
+                  <li><div data-percentage="32" class="bar"></div><span>Tedious Navigation</span></li>
+                  <li><div data-percentage="25" class="bar"></div><span>Ambiguous Features</span></li>
+                  <li><div data-percentage="25" class="bar"></div><span>Too Many Features</span></li>
+                  <li><div data-percentage="19" class="bar"></div><span>Cluttered Workspace</span></li>
+                </ul>
+              </div>
             <p>Dashboards resemble aircraft cockpits with multitudes of ambiguous features cluttering the workspace. Information overload is something the user must constantly deal with.</p>
           </span>
           <span>
             <h4>Success Factors</h4>
-            <!-- col chart here -->
+              <div id="chart">
+                <ul class="bar-green">
+                  <li><div data-percentage="65" class="bar"></div><span>Simple Layout</span></li>
+                  <li><div data-percentage="59" class="bar"></div><span>Sharing Features</span></li>
+                  <li><div data-percentage="41" class="bar"></div><span>Live Editing</span></li>
+                  <li><div data-percentage="24" class="bar"></div><span>Quick Navigation</span></li>
+                </ul>
+              </div>
             <p>Simplicity speaks as the favored trait whether it’s with the decision flow, architecture, wording, icons, functionality, or features. Users want an easy and shared experience.</p>
           </span>
         </div>
       </article>
 
-      <!-- competitive analysis -->
+      <!-- Competitive analysis -->
       <article>
         <h3 class = "process-steps"><span class = "gold-number">2.</span> Competitive Analysis</h3>
         <p>We have 2 big competitors - survey results show 94% use Google Drive, and 41% use Dropbox. I identified strengths and weaknesses to find an optimal landscape and direction for Skylake to grow.</p>
+        <div id="chart">
+          <ul class="bar-green">
+            <li><div data-percentage="94" class="bar"></div><span>Google Drive</span></li>
+            <li><div data-percentage="41" class="bar"></div><span>Dropbox</span></li>
+          </ul>
+        </div>
         <p>They’re doing something right, but a closer look reveals some poor UI decisions that frustrate users.</p>
         <img src="#">
         <div class="btn-group">
-          <button>Proximity</button>
+          <button>Awkward Proximity</button>
           <button>Unclear Features</button>
           <button>Feature Creep</button>
           <button>Unnecessary Steps</button>
@@ -126,7 +151,7 @@
         <p>The competition definitely lacks no features but you have to constantly work to find where they are and what they mean. Is this the experience we want for our users? Or more importantly, who are the users?</p>
       </article>
 
-      <!-- user personas-->
+      <!-- User personas-->
       <article>
         <h3 class = "process-steps"><span class = "gold-number">3.</span> User Personas</h3>
         <p>Having understood the market, I visualized the potential consumers with user personas to give context to real world scenarios.</p>
@@ -145,9 +170,9 @@
         <p>With our personas in mind, I created a list of common use cases in the form of user stories. Every story tells of a mini journey but not all stories are born equal. Thus, I categorize task by priority and user type.</p>
         <table>
           <tr>
-            <th>High</th>
-            <th>Medium</th>
-            <th>Low</th>
+            <th class="high">High</th>
+            <th class="med">Medium</th>
+            <th class="low">Low</th>
           </tr>
           <tr>
             <td>All Users would like to choose a file type (Doc, Sheet, Note, Slides) when creating a new file.</td>
@@ -194,7 +219,7 @@
         <button type="button" name="button"><a href="#">Wireframe Prototype</a></button>
       </article>
 
-      <!-- user testing 1 -->
+      <!-- User Testing 1 -->
       <article>
         <h3 class = "process-steps"><span class = "gold-number">7.</span> User Testing - First Round</h3>
         <h4>What <span class = "worked">Worked</span></h4>
@@ -202,7 +227,7 @@
         <h4>What <span class = "didnotwork">Didn't</span></h4>
         <p>When presented with two buttons, the users naturally click the bigger or bottom-most button without reading the text. Having two buttons creates a tension between options. In the login page, some users blindly clicked the “create account” button rather than “login.”</p>
         <img src="#">
-        <p>In the Hi-Fi (next section), the primary page action was kept as a button and revealed after fillout. The Login button reveals on password fillout to grab the users attention with only one option. The secondary action (creating an account) was changed to a link and moved away from the visual path.</p>
+        <p>In the Hi-Fi stage, the primary page action was kept as a button and revealed after fillout. The Login button reveals on password fillout to grab the users attention with only one option. The secondary action (creating an account) was changed to a link and moved away from the visual path.</p>
         <img src="#">
         <p>Users don’t want to have to think about every action. Little breadcrumbs can steer users to confusion or success. Laying the right path determines that success.</p>
       </article>
@@ -221,15 +246,18 @@
         </div>
       </article>
 
-      <!-- user testing 2 -->
+      <!-- User testing 2 -->
       <article>
         <h3 class = "process-steps"><span class = "gold-number">9.</span> User Testing - Round Two</h3>
         <h4>What <span class = "worked">Worked</span></h4>
         <p>Users were able to easily navigate, manage files, invite members to groups, find file details and version history.</p>
         <h4>What <span class = "didnotwork">Didn't</span></h4>
         <p>The Sign up process was 3 steps, which was 2 steps too many. Users just wanted to click and go, thus it was made to be.</p>
-        <img src="#">
-        <img src="#">
+        <div class = "image-box">
+          <img src="#">
+          <img src="#">
+          <img src="#">
+        </div>
         <p>Some users were confused with the “Group” action (creating new Groups or Folders). Some users associated the “new” button with files and folders, not new groups. Another user confused the “create folder” button with the “upload folder” button.</p>
 
         <p>Thus, I removed the “Group” category and moved the “Create Group” button to the Social button in the navigation bar. I also moved the “Create New Folder” button to the “Create” category.</p>
@@ -241,6 +269,7 @@
         <img src="#">
       </article>
 
+      <!-- Brand Identity-->
       <article>
         <h3 class = "process-steps"><span class = "gold-number">10.</span> Brand Identity</h3>
         <p>I wanted my users to feel personally connected and at peace. Mixing colorful personalities with the concept of cloud, I looked to the aurora borealis for natural inspiration. An array of green, violet, and red light particles glowing in the sky brings a sense of calming awe and wonder to everyone looking up from it’s horizon.</p>
@@ -252,6 +281,7 @@
         <p>The mountain is the origin of a single long stroke which ends openly to represent continuity or the infinite. Cloud has a sense of vastness and freedom that allows the user to connect within a single medium. I wanted to accentuate the mountain and aurora so I circled the logo and used negative space.</p>
       </article>
 
+      <!-- Conclusions -->
       <article>
         <h1 class = "main-sections">Conclusions</h1>
         <div class = "conclusions">
@@ -259,12 +289,12 @@
           <h4>Process</h4>
           <p>An iterative and rigorous design process encourages a robust final product. In conjunction, flexibility and balance of time and effort is the managerial counterpart to process - equally as important to success as future projects will have unpredictable constraints or schedules.</p>
         </div>
-        <div>
+        <div class = "conclusions">
           <img src="#">
           <h4>Feedback</h4>
           <p>User Feedback is absolutely crucial. I wasn’t too sure that there was space for another cloud app but the user survey revealed real problems that needed solutions. Remaining unbiased is difficult. Thankfully, prototyping and testing reveals all the cracks in both form and function.</p>
         </div>
-        <div>
+        <div class = "conclusions">
           <img src="#">
           <h4>Visual</h4>
           <p>Visual communication is a delicate art with no one true answer. The method needs to fit into context of each situation and action. A brand needs character and meaning, not just pretty face. But it all starts with a sketch, the first-fruit of creation.</p>
